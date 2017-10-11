@@ -1,0 +1,26 @@
+header{
+    border: 1px solid #ddd;
+    h3{
+        font:{
+            size:1.4em;
+        }
+        margin: 1em 0;
+    }
+}
+.row{
+    margin: 0;
+}
+
+.page-wrapper{
+    width: 100%;
+    min-height: 80vh;
+}
+
+//-------- FORM CLASSES ---------
+
+.form-error{
+    color: red;
+    input{
+        border-color: red;
+    }
+}

@@ -1,0 +1,21 @@
+<div class="page-wrapper" id="home-page">
+    <div class="form-wrapper">
+        <form class="" method="post" name="loginForm">
+            <div class="form-group" ng-class="{true: 'form-error'}[submitted && loginForm.email.$invalid]">
+                <label for="email" class="req">Email</label>
+                <input type="email" class="form-control" name="email" ng-model="email" required />
+                <p class="form-error" ng-if="submitted && loginForm.email.$error.email">Please Enter Valid Email</p>
+                <p class="form-error" ng-if="submitted && loginForm.email.$error.required">Email is required</p>
+            </div>
+            <div class="form-group" ng-class="{true: 'form-error'}[submitted && loginForm.passw.$invalid]">
+                <label for="passw" class="req">Password</label>
+                <input type="password" class="form-control" ng-pattern="/^[A-Z][a-z0-9]{3,9}$/" name="passw" ng-model="passw" required />
+                <p class="form-error" ng-if="submitted && loginForm.passw.$error.pattern">Invalid Password</p>
+                <p class="form-error" ng-if="submitted && loginForm.passw.$error.required">Password is required</p>
+            </div>
+            <div class="button-wrap text-center">
+                <input type="submit" class="btn btn-primary" name="submit" value="Login" ng-click="LoginUser()" />
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+header {
+  border: 1px solid #ddd; }
+  header h3 {
+    font-size: 1.4em;
+    margin: 1em 0; }
+
+.row {
+  margin: 0; }
+
+.page-wrapper {
+  width: 100%;
+  min-height: 80vh; }
+
+.form-error {
+  color: red; }
+  .form-error input {
+    border-color: red; }
+
+#home-page .form-wrapper {
+  width: 30%;
+  margin: 2em auto; }
+
+#dashboard-page .welcome-user {
+  padding: 1em 0;
+  font-size: 1.2em;
+  color: #999; }
+#dashboard-page .products-wrapper .add-product-modal {
+  margin: 1em 0; }
+#dashboard-page .products-wrapper li {
+  position: relative;
+  width: 24.1%;
+  margin: 1% 1% 1% 0; }
+  #dashboard-page .products-wrapper li:nth-child(4n) {
+    margin-right: 0; }
+  #dashboard-page .products-wrapper li .actions {
+    position: absolute;
+    top: 0;
+    right: 0; }
+    #dashboard-page .products-wrapper li .actions img {
+      width: 20px;
+      height: 20px;
+      cursor: pointer; }
+  #dashboard-page .products-wrapper li p .grey, #dashboard-page .products-wrapper li p strong {
+    display: inline-block;
+    vertical-align: middle; }
+  #dashboard-page .products-wrapper li p .grey {
+    color: grey;
+    width: 40%; }
+  #dashboard-page .products-wrapper li p strong {
+    width: 58%; }
+
+/*# sourceMappingURL=app.css.map */

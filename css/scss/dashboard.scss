@@ -1,0 +1,47 @@
+
+#dashboard-page{
+    .welcome-user{
+        padding: 1em 0;
+        font:{
+            size:1.2em;
+        }
+        color: #999;
+    }
+    .products-wrapper{
+        .add-product-modal{
+            margin: 1em 0;
+        }
+        li{
+            position: relative;
+            width: 24.1%;
+            margin: 1% 1% 1% 0;
+            &:nth-child(4n){
+                margin-right: 0;
+            }
+            .actions{
+                position: absolute;
+                top:0;
+                right:0;
+                img{
+                    width: 20px;
+                    height: 20px;
+                    cursor: pointer;
+                }
+            }
+            p{
+                .grey,strong{
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                .grey{
+                    color: grey;
+                    width: 40%;
+                }
+                strong{
+                    width: 58%;
+                }
+
+            }
+        }
+    }
+}

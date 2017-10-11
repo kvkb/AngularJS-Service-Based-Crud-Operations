@@ -1,0 +1,57 @@
+<script type="text/ng-template" id="AddProductModal.html">
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">{{$ctrl.type}} Products</h3>
+    </div>
+    <div class="modal-body" id="modal-body">
+        <div class="form-wrapper">
+            <form>
+                <div class="form-group">
+                    <label for="pname">Product Name</label>
+                    <input type="text" class="form-control" name="name" ng-model="$ctrl.name" />
+                </div>
+                <div class="form-group">
+                    <label for="price">Price</label>
+                    <input type="text" class="form-control" name="price" ng-model="$ctrl.price" />
+                </div>
+                <div class="form-group">
+                    <label for="pquality">Product Quality</label>
+                    <input type="text" class="form-control" name="quality" ng-model="$ctrl.quality" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">OK</button>
+        <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+    </div>
+</script>
+<div class="page-wrapper" id="dashboard-page" ng-controller="DashboardController as $ctrl">
+    <div class="text-right welcome-user">
+        <p ng-if="UserName">Hello {{UserName}}</p>
+    </div>
+    <div class="products-wrapper">
+        <div class="add-product-modal text-right">
+            <a href="javascript:void(0);" class="btn btn-primary" ng-click="$ctrl.AddProduct('sm')">Add Product</a>
+        </div>
+        <ul class="list-inline">
+            <li ng-repeat="item in products" id="product{{$index}}">
+                <div class="actions">
+                    <img src="img/remove.png" alt="remove icon" ng-click="RemoveProduct($index)" title="Remove Product" />
+                    <img src="img/edit.png" alt="edit icon" ng-click="EditProduct(item,$index)" title="Edit Product" />
+                </div>
+                <div class="product-img">
+                    <img src="img/product.jpeg" alt="product image" />
+                </div>
+                <h3 class="text-center">{{item.name}}</h3>
+                <p>
+                    <span class="grey">Price</span>
+                    <strong>{{item.price}}</strong>
+                </p>
+                <p>
+                    <span class="grey">Quality</span>
+                    <strong>{{item.quality}}</strong>
+                </p>
+            </li>
+        </ul>
+    </div>
+</div>

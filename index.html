@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="clarionShoppingCart">
+    <head>
+        <meta charset="utf-8">
+        <title>Clarion Shopping Cart {{}} Page</title>
+        <link rel="stylesheet" href="css/integrated.css">
+    </head>
+    <body ng-controller="IndexController">
+        <div ng-include="'views/common/header.html'"></div>
+        <div class="container" ng-view>
+
+        </div>
+        <div ng-include="'views/common/footer.html'"></div>
+        <script type="text/javascript" src="js/integrated.js"></script>
+    </body>
+</html>
