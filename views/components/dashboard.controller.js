@@ -152,34 +152,3 @@ app.controller('EditProductModalCtrl', function ($uibModalInstance,type,id,name,
         $uibModalInstance.dismiss('cancel');
     };
 });
-
-// Please note that the close and dismiss bindings are from $uibModalInstance.
-
-app.component('modalComponent', {
-    templateUrl: 'myModalContent.html',
-    bindings: {
-        resolve: '<',
-        close: '&',
-        dismiss: '&'
-    },
-    controller: function () {
-        var $ctrl = this;
-
-        $ctrl.$onInit = function () {
-            $ctrl.type = $ctrl.resolve.type;
-            $ctrl.name = $ctrl.resolve.name;
-            $ctrl.price = $ctrl.resolve.price;
-            $ctrl.quality = $ctrl.resolve.quality;
-            $ctrl.newProduct = $ctrl.resolve.newProduct;
-        };
-
-        $ctrl.ok = function () {
-            $ctrl.close();
-
-        };
-
-        $ctrl.cancel = function () {
-            $ctrl.dismiss();
-        };
-    }
-});

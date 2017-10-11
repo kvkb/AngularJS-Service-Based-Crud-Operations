@@ -11,7 +11,7 @@ app.controller("HomeController",function($scope,$window,LoginService) {
         }
 
         if($scope.email == "clarion@clarion.com" && $scope.passw == "Clarion123"){
-            $window.location.href = 'http://localhost/clarion/#!/Dashboard';
+            $window.location.href = 'http://localhost/gt/#!/Dashboard';
         }
 
     }
